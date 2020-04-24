@@ -1,0 +1,19 @@
+.chart-container {
+    margin-bottom: 25px;
+    .btns {
+        margin-top: 10px;
+        text-align: center;
+        & button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 5px;
+            margin: 5px;
+            border: 1px solid gray;
+            &:hover{
+                cursor: pointer;
+                background-color: #ffffff11;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.transfer-fund-container {
+    width: 100%;
+    input {
+        flex-grow: 1;
+        height: 36px;
+        padding-left: 8px;
+        border: none;
+    }
+    .transfer-msg {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.7);
+        color: #E88C30;
+        padding:10px 0;
+        text-align: center;
+        font-size: 1em;
+        font-weight: 700;
+        width: 50%;
+        bottom:100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .transfer-msg.insufficient {
+        color: red;
+    }
+
+}

@@ -1,0 +1,75 @@
+.app-header-container {
+  .logo {
+    font-family: "Fugaz One";
+    font-size: 1.25em;
+    .logo-dot {
+      color: #e88c30;
+    }
+  }
+
+  .navbar {
+    a {
+      text-align: center;
+      width: 80px;
+      padding: 20px 10px;
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+  }
+  .active {
+    color: #e88c30;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header-container {
+      .logo {
+        padding: 15px;
+      }
+    .navbar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      flex-direction: column;
+      background-color: rgb(34, 34, 53);
+      width: 40%;
+      font-size: 1.2em;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+      transform: translateX(200%);
+      transition: all .8s;
+      a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 10px 0;
+        height: 50px;
+    }
+    &.shown {
+        transform: translateX(0);
+        // box-shadow: -5px 5px 5px 1000px #000000a1;
+      }
+    }
+    .hamburger {
+      display: initial;
+        margin-right: 20px;
+    }
+    .dark-screen {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #000000a1;
+      z-index: 99;
+    }
+  }
+}

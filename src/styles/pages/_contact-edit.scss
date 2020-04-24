@@ -1,0 +1,60 @@
+.contact-edit-container {
+    box-sizing: border-box;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(41, 41, 66);
+    width: 500px;
+    padding: 40px;
+    .form-row {
+      position: relative;
+      width: 100%;
+      margin-bottom: 3px;
+      input {
+        padding-left: 8px;
+        padding-right: 20px;
+        width: 100%;
+        height: 45px;
+        color: white;
+        background-color: inherit;
+        line-height: 1.5;
+        font-size: 1.1em;
+        border: none;
+        border-bottom: 1px solid #8089a4;
+  
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .form-row:nth-child(2) {
+      margin-bottom: 25px;
+    }
+    .action-btns {
+      width: 100%;
+      .save-btn {
+        align-self: flex-start;
+      }
+      .cancel-btn {
+        cursor: pointer;
+      }
+    }
+    .validation-error {
+      color: rgb(255, 53, 53);
+      margin: 0;
+      padding-left: 8px;
+      opacity: 0;
+      height: 22px;
+    }
+    .validation-error.is-requierd {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 500px) {
+      .contact-edit-container { 
+          width: 95vw;
+      }
+  }
+  

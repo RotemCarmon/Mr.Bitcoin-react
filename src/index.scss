@@ -1,0 +1,32 @@
+/* BASE */
+
+@import './styles/basics/variables';
+@import './styles/basics/mixins';
+@import './styles/basics/helpers';
+@import './styles/basics/base';
+@import './styles/basics/buttons';
+@import './styles/basics/functions';
+@import './styles/basics/layout';
+@import './styles/basics/typography';
+
+/* PAGES */
+
+@import './styles/pages/home-page';
+@import './styles/pages/contact-details';
+@import './styles/pages/contact-page';
+@import './styles/pages/contact-edit';    
+@import './styles/pages/signup-page';    
+
+/* CMPS */
+
+@import './styles/cmps/app-header';
+@import './styles/cmps/app-footer';
+@import './styles/cmps/contact-list';    
+@import './styles/cmps/contact-preview';    
+@import './styles/cmps/contact-filter';    
+@import './styles/cmps/transfer-fund';    
+@import './styles/cmps/move-preview';    
+@import './styles/cmps/chart-cmp';    
+   
+
+

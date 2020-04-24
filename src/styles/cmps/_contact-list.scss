@@ -1,0 +1,11 @@
+.contact-list-container {
+    column-count: 2;
+
+}
+
+@media (max-width: 600px) {
+    .contact-list-container {
+        column-count: 1;
+    }
+    
+}
