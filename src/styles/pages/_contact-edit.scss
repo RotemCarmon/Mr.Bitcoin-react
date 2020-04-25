@@ -4,7 +4,7 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(41, 41, 66);
+    background-color: $ui;
     width: 500px;
     padding: 40px;
     .form-row {
@@ -21,7 +21,7 @@
         line-height: 1.5;
         font-size: 1.1em;
         border: none;
-        border-bottom: 1px solid #8089a4;
+        border-bottom: 1px solid #9fa0a1;
   
         &:focus {
           outline: none;

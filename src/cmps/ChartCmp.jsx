@@ -9,13 +9,13 @@ export default class ChartCmp extends Component {
       legend: "none",
       curveType: "function",
       vAxis: {
-        textStyle: { color: "#8089A4" },
+        textStyle: { color: "#c6c6c6" },
       },
       hAxis: {
-        textStyle: { color: "#8089A4" },
+        textStyle: { color: "#c6c6c6" },
       },
       backgroundColor: {
-        fill: "rgb(41, 41, 66)",
+        fill: "#393939",
       },
       colors: ["#E88C30"],
       titleTextStyle: { color: "#FFF" },
