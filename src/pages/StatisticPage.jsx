@@ -8,15 +8,20 @@ export default class StatisticPage extends Component {
   state = {
     marketPrice: null,
     tradeVolume: null,
-    confirmedTransactions: null,
-   
+    confirmedTransactions: null,   
   };
+  _isMounted = false
 
   componentDidMount() {
+    this._isMounted = true;
     this.getMarketPrice();
     this.getTradeVolume();
     this.getConfirmedTransactions();
   }
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+  
 
   getMarketPrice = async () => {
     var marketPrice = JSON.parse(localStorage.getItem("marketPrice"));
@@ -30,13 +35,14 @@ export default class StatisticPage extends Component {
       ["Date", "Price"],
       ...(await this.prepareChartData(marketPrice)),
     ];
-
-    this.setState({
-      marketPrice: {
-        data: [...marketPrice.data],
-        title: marketPrice.name
-      },
-    });
+    if(this._isMounted){
+      this.setState({
+        marketPrice: {
+          data: [...marketPrice.data],
+          title: marketPrice.name
+        },
+      });
+    }
   };
 
   getTradeVolume = async () => {
@@ -50,12 +56,14 @@ export default class StatisticPage extends Component {
       ["Date", "Price"],
       ...(await this.prepareChartData(tradeVolume)),
     ];
+    if(this._isMounted){
     this.setState({
         tradeVolume: {
         data: [...tradeVolume.data],
         title: tradeVolume.name
       },
     });
+  }
   };
 
   getConfirmedTransactions = async () => {
@@ -69,12 +77,14 @@ export default class StatisticPage extends Component {
       ["Date", "Price"],
       ...(await this.prepareChartData(confirmedTransactions)),
     ];
+    if(this._isMounted){
     this.setState({
         confirmedTransactions: {
         data: [...confirmedTransactions.data],
         title: confirmedTransactions.name
       },
     });
+  }
   };
 
   prepareChartData = (rowData) => {

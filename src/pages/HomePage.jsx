@@ -13,20 +13,30 @@ class HomePage extends Component {
     rate: null,
     chartData: null,
   };
+  _isMounted = false
 
   async componentDidMount() {
+    this._isMounted = true
     const user = await this.props.loadUser();
     if (!user) {
       this.props.history.push("/signup");
       return;
     }
-
-    const rate = await BitcoinService.getRate();
-
-    this.setState({ ...this.state, rate: rate.data });
-
+    
+    this.getBitRate();
     this.setChartData();
   }
+  
+  componentWillUnmount() {
+    this._isMounted = false
+  }
+
+  getBitRate = async () => {
+    const rate = await BitcoinService.getRate();
+    if(this._isMounted){
+      this.setState({ ...this.state, rate: rate.data });
+    }
+  } 
 
   getMovesToShow = () => {
     if (!this.props.user) return;
@@ -35,12 +45,14 @@ class HomePage extends Component {
 
   setChartData = () => {
     const data = this.prepareChartData(this.props.user.moves);
-    this.setState({
-      chartData: {
-        data: data,
-        title: "Moves history",
-      },
-    });
+    if(this._isMounted){
+      this.setState({
+        chartData: {
+          data: data,
+          title: "Moves history",
+        },
+      });
+    }
   };
   prepareChartData = (moves) => {
     const data = moves.map((move) => {

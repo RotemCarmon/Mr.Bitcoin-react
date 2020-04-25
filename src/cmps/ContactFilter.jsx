@@ -9,6 +9,7 @@ export default class ContactFilter extends Component {
     super(props);
     this.state = { ...props.filterBy };
   }
+  
 
   onSubmit = (event) => {
     event.preventDefault();

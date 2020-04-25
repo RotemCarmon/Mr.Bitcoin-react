@@ -21,17 +21,25 @@ export default class ChartCmp extends Component {
       titleTextStyle: { color: "#FFF" },
     },
   };
+  _isMounted = false;
   componentDidMount() {
+    this._isMounted = true;
+
     this.getChartData();
   } 
-
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+  
   getChartData = () => {
     const { chartData } = this.props;
     if (chartData) {
+      if(this._isMounted){
       this.setState({
         chartData: chartData.data,
         options: { ...this.state.options, title: chartData.title },
       });
+    }
     }
   };
   setDataLength = (int = 0) => {
@@ -40,7 +48,9 @@ export default class ChartCmp extends Component {
         this.props.chartData.data[0],
         ...this.props.chartData.data.slice(int * -1),
       ];
+      if(this._isMounted){
       this.setState({ chartData: data });
+      }
     }
   };
   isMovesChart(){
