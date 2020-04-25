@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { createHashHistory } from 'history';
 
 import HomePage from "./pages/HomePage";
 import ContactPage from './pages/ContactPage';
@@ -11,7 +11,7 @@ import SignupPage from './pages/SignupPage'
 import AppHeader from './cmps/AppHeader'
 import AppFooter from './cmps/AppFooter'
 
-const history = createBrowserHistory();
+const history = createHashHistory();
 
 function App() {
   return (

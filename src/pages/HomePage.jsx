@@ -12,11 +12,9 @@ class HomePage extends Component {
   state = {
     rate: null,
     chartData: null,
-    _isMounted: null,
   };
-  
+
   async componentDidMount() {
-    this.setState({ _isMounted: true });
     const user = await this.props.loadUser();
     if (!user) {
       this.props.history.push("/signup");
@@ -24,14 +22,10 @@ class HomePage extends Component {
     }
 
     const rate = await BitcoinService.getRate();
-    if (this.state._isMounted) {
-      this.setState({ ...this.state, rate: rate.data });
-    }
-    this.setChartData();
-  }
 
-  componentWillUnmount() {
-    this.setState({ _isMounted: null }, console.log(this.state._isMounted));
+    this.setState({ ...this.state, rate: rate.data });
+
+    this.setChartData();
   }
 
   getMovesToShow = () => {
@@ -41,15 +35,12 @@ class HomePage extends Component {
 
   setChartData = () => {
     const data = this.prepareChartData(this.props.user.moves);
-    console.log("Still not clean");
-    if (this.state._isMounted) {
-      this.setState({
-        chartData: {
-          data: data,
-          title: "Moves history",
-        },
-      });
-    }
+    this.setState({
+      chartData: {
+        data: data,
+        title: "Moves history",
+      },
+    });
   };
   prepareChartData = (moves) => {
     const data = moves.map((move) => {
@@ -75,7 +66,9 @@ class HomePage extends Component {
           {data && <ChartCmp chartData={data} />}
         </section>
         <section className="user-moves">
-          {!moves.length ? "No moves to show" : (
+          {!moves.length ? (
+            "No moves to show"
+          ) : (
             <div>
               <h2>Your last {moves.length} moves</h2>
               <MoveList moves={moves} />
