@@ -23,7 +23,7 @@ export default class ChartCmp extends Component {
   };
   componentDidMount() {
     this.getChartData();
-  }
+  } 
 
   getChartData = () => {
     const { chartData } = this.props;

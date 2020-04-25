@@ -5,7 +5,7 @@ import { addUser } from "../actions/userActions";
 
 class SignupPage extends Component {
     state = {
-        name: ''
+        name: '',
     }
 
     onChangeHandler = (ev) => {
@@ -20,7 +20,8 @@ class SignupPage extends Component {
        
         this.props.history.push('/')
     }
-      
+
+
     render() {
         return (
             <section className="signup-container">
