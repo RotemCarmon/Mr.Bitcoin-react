@@ -26,7 +26,7 @@ export default class ContactFilter extends Component {
       <form onSubmit={this.onSubmit} className="contact-filter flex align-end justify-center">
         <input
           type="text"
-          placeholder="Enter your name..."
+          placeholder="Search"
           onChange={this.onChangeHandler}
           name="term"
           value={this.state.term}
