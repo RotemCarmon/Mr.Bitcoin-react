@@ -8,14 +8,15 @@
     }
     .transfer-msg {
         position: absolute;
-        background-color: rgba(104, 104, 104, 0.7);
+        background-color: rgba(104, 104, 104, 0.979);
         color: #E88C30;
-        padding:10px 0;
+        padding:10px 5px;
         text-align: center;
         font-size: 1em;
         font-weight: 700;
-        width: 50%;
-        bottom:100%;
+        width: fit-content;
+        min-width: 50%;
+        bottom:0;
         left: 50%;
         transform: translateX(-50%);
     }

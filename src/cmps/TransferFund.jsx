@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class TransferFund extends Component {
   state = {
-    fund: "",
+    fund: '',
     userMsg: "",
     msgTimer: null,
   };
@@ -17,13 +17,13 @@ export default class TransferFund extends Component {
       this.sendUserMsg("Insufficient funds");
       return;
     }
-    if (fund === 0) {
+    if (!fund) {
       this.sendUserMsg("Amount is required");
       return;
     }
     this.props.transferFund(fund);
     this.sendUserMsg(`You made a transaction of ${fund} coins`);
-    this.setState({ fund: "" });
+    this.setState({ fund: '' });
   };
 
   handleFunds = (ev) => {
