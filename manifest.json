@@ -1,5 +1,5 @@
 {
-  "short_name": "Mr.BITCoin w/ react",
+  "short_name": "Mr.BITCoin react",
   "name": "Mister BITCoin react",
   "icons": [
     {
@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
