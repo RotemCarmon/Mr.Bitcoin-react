@@ -102,7 +102,7 @@ export default class StatisticPage extends Component {
     const confirmedTransactions = this.state.confirmedTransactions;
 
     return (
-    <div>
+    <div className="statistic-page-container">
         {marketPrice && <ChartCmp chartData={marketPrice} />}
         {tradeVolume && <ChartCmp chartData={tradeVolume} />}
         {confirmedTransactions && <ChartCmp chartData={confirmedTransactions} />}

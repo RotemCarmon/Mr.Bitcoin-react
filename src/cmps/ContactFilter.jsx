@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default class ContactFilter extends Component {
   state = {
@@ -32,6 +34,7 @@ export default class ContactFilter extends Component {
           name="term"
           value={this.state.term}
         />
+        <FontAwesomeIcon className="fa-icon" icon={faSearch} />
       </form>
     );
   }

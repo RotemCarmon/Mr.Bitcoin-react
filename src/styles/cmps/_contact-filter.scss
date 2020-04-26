@@ -1,6 +1,10 @@
 .contact-filter {
+    position: relative;
     font-size: 1.25em;
     text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+    width: fit-content;
     label {
         margin-right: 10px;
     }
@@ -15,7 +19,14 @@
             outline: none;
         }
     }
+    .fa-icon {
+        position: absolute;
+        transform: translateY(30%);
+        right: 8px;
+        top: 0;
+
     }
+}
     
     @media (max-width: 500px) {
         .contact-filter { 

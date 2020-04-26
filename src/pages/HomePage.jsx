@@ -40,7 +40,7 @@ class HomePage extends Component {
 
   getMovesToShow = () => {
     if (!this.props.user) return;
-    return this.props.user.moves.slice(0, 3);
+    return this.props.user.moves.slice(0,3);
   };
 
   setChartData = () => {
