@@ -1,8 +1,7 @@
 .app-header-container {
-  .Logo-active {
-    pointer-events: none;
-  }
+
   .logo {
+    cursor: pointer;
     font-family: "Fugaz One";
     font-size: 1.25em;
 
@@ -22,7 +21,6 @@
   }
   .active {
     color: #e88c30;
-    pointer-events: none;
     &:hover {
       cursor: pointer;
     }
