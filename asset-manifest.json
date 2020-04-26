@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Mr.Bitcoin-react/static/css/main.7ddcbd5c.chunk.css",
-    "main.js": "/Mr.Bitcoin-react/static/js/main.b09a1f92.chunk.js",
-    "main.js.map": "/Mr.Bitcoin-react/static/js/main.b09a1f92.chunk.js.map",
+    "main.css": "/Mr.Bitcoin-react/static/css/main.426fedc7.chunk.css",
+    "main.js": "/Mr.Bitcoin-react/static/js/main.b4bc6a01.chunk.js",
+    "main.js.map": "/Mr.Bitcoin-react/static/js/main.b4bc6a01.chunk.js.map",
     "runtime-main.js": "/Mr.Bitcoin-react/static/js/runtime-main.49a1c643.js",
     "runtime-main.js.map": "/Mr.Bitcoin-react/static/js/runtime-main.49a1c643.js.map",
-    "static/js/2.a721054f.chunk.js": "/Mr.Bitcoin-react/static/js/2.a721054f.chunk.js",
-    "static/js/2.a721054f.chunk.js.map": "/Mr.Bitcoin-react/static/js/2.a721054f.chunk.js.map",
+    "static/js/2.d80296f8.chunk.js": "/Mr.Bitcoin-react/static/js/2.d80296f8.chunk.js",
+    "static/js/2.d80296f8.chunk.js.map": "/Mr.Bitcoin-react/static/js/2.d80296f8.chunk.js.map",
     "index.html": "/Mr.Bitcoin-react/index.html",
-    "precache-manifest.2cee72e70d568e9dafefb180800ac7fd.js": "/Mr.Bitcoin-react/precache-manifest.2cee72e70d568e9dafefb180800ac7fd.js",
+    "precache-manifest.b53525717666723614c8373dd7c2dfa0.js": "/Mr.Bitcoin-react/precache-manifest.b53525717666723614c8373dd7c2dfa0.js",
     "service-worker.js": "/Mr.Bitcoin-react/service-worker.js",
-    "static/css/main.7ddcbd5c.chunk.css.map": "/Mr.Bitcoin-react/static/css/main.7ddcbd5c.chunk.css.map",
-    "static/js/2.a721054f.chunk.js.LICENSE.txt": "/Mr.Bitcoin-react/static/js/2.a721054f.chunk.js.LICENSE.txt",
+    "static/css/main.426fedc7.chunk.css.map": "/Mr.Bitcoin-react/static/css/main.426fedc7.chunk.css.map",
+    "static/js/2.d80296f8.chunk.js.LICENSE.txt": "/Mr.Bitcoin-react/static/js/2.d80296f8.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/Mr.Bitcoin-react/static/media/FugazOne-Regular.a7803ddf.ttf",
     "static/media/coins.png": "/Mr.Bitcoin-react/static/media/coins.d4f1d6fb.png",
     "static/media/usd.png": "/Mr.Bitcoin-react/static/media/usd.80e1c567.png"
   },
   "entrypoints": [
     "static/js/runtime-main.49a1c643.js",
-    "static/js/2.a721054f.chunk.js",
-    "static/css/main.7ddcbd5c.chunk.css",
-    "static/js/main.b09a1f92.chunk.js"
+    "static/js/2.d80296f8.chunk.js",
+    "static/css/main.426fedc7.chunk.css",
+    "static/js/main.b4bc6a01.chunk.js"
   ]
 }
